@@ -1,20 +1,19 @@
-#include <iostream>
+#include <iostream>  // Header untuk input-output di C++
 using namespace std;
 
 int main() {
 
-    float  luas, p, l;
+    float luas, p, l; // Deklarasi variabel float: luas, panjang (p), dan lebar (l)
 
     cout << "Masukkan panjang : ";
-    cin >> p;
+    cin >> p;  // Input nilai panjang
     
     cout << "Masukkan lebar : ";
-    cin >> l;
+    cin >> l;  // Input nilai lebar
+    
+    luas = p * l; // Menghitung luas = panjang × lebar
 
-    Luas = p * l;
-    cout << "luas = " << Luas << endl;
+    cout << "luas = " << luas << endl; // Menampilkan hasil luas
 
-    return 0;
+    return 0; // Program selesai
 }
-
-
