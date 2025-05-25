@@ -1,21 +1,20 @@
-#include <iostream> // header untuk C++
-#include <conio.h> // header untuk fungsi getch() dan getche()
+#include <iostream>  // Header standar untuk input-output di C++
+#include <conio.h>   // Digunakan untuk fungsi getch() dan getche(), TIDAK portabel (khusus Windows/Turbo C)
 using namespace std;
 
 int main() {
+    string nama;         // Menyimpan nama sebagai string (C++ modern)
+    char kom, jeniskelamin; // Menyimpan satu karakter: kom dan jenis kelamin
+    int nim;             // Menyimpan NIM
+    float ip;            // Menyimpan IP (Indeks Prestasi)
 
-    string nama;
-    char kom, jeniskelamin;
-    int nim;
-    float ip;
-    
-    /*ini untuk komen
-    beberapa baris*/
+    /* Ini komentar
+       beberapa baris */
 
-    cout << "Hello World" << endl;
+    cout << "Hello World" << endl; // Menampilkan teks dengan baris baru
 
     cout << "Masukkan nama anda : ";
-    cin >> nama;
+    cin >> nama; // ⚠️ Akan berhenti pada spasi. Jika nama terdiri dari dua kata, gunakan getline(cin, nama)
 
     cout << "Masukkan kom : ";
     cin >> kom;
@@ -27,15 +26,15 @@ int main() {
     cin >> ip;
 
     cout << "Masukkan jenis kelamin : (L/P) : ";
-    jeniskelamin = getche(); // agar karakter langsung tampil, tanpa tekan enter
+    jeniskelamin = getche(); // Menampilkan karakter secara langsung tanpa menunggu Enter
 
-
-    /*Untuk Output*/
+    /* Untuk Output */
+    cout << endl; // Tambahkan baris baru agar output tidak menempel
     cout << nama << endl;
     cout << kom << endl;
     cout << nim << endl;
     cout << ip << endl;
-    putchar(jeniskelamin); // untuk menampilkan karakter dari si jenis kelamin
+    putchar(jeniskelamin); // Menampilkan karakter jenis kelamin
 
-    getch(); // karakter yang diketik tidak ditampilkan di layar
+    getch(); // Menunggu tombol ditekan tanpa menampilkan karakter — hanya berfungsi di Windows
 }
